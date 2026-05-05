@@ -2,23 +2,6 @@
 
 Analyse complète et approfondie du marché immobilier parisien couvrant 5 années de données transactionnelles avec visualisations interactives, explorations de données et présentation exécutive.
 
----
-
-## 📋 Table des Matières
-
-- [Vue d'ensemble](#vue-densemble)
-- [Structure du Projet](#structure-du-projet)
-- [Livrables](#livrables)
-- [Dataset](#dataset)
-- [Guide d'Utilisation](#guide-dutilisation)
-- [Méthodologie](#méthodologie)
-- [Stack Technologique](#stack-technologique)
-- [Auteur](#auteur)
-
----
-
-## 🎯 Vue d'ensemble
-
 Ce projet analyse l'**évolution du marché immobilier à Paris** entre **2017 et 2021**, période marquée par plusieurs changements significatifs (COVID-19, télétravail, modifications fiscales).
 
 ### Objectifs principaux
@@ -28,13 +11,6 @@ Ce projet analyse l'**évolution du marché immobilier à Paris** entre **2017 e
 ✅ Étudier l'impact de variables externes sur les prix  
 ✅ Fournir des insights actionnables pour investisseurs et professionnels  
 ✅ Créer une présentation exécutive synthétique  
-
-### Cas d'usage
-
-- 🏠 **Investisseurs immobiliers** : Identifier les opportunités d'achat
-- 📊 **Analystes marché** : Comprendre les tendances sectorielles
-- 🎓 **Data Analysts** : Exercice complet d'analyse de données
-- 📋 **Décideurs** : Tableau de bord et insights clés
 
 ---
 
@@ -54,9 +30,7 @@ analyse-immobilier-paris/
 ---
 
 ## 📦 Livrables
-
-### 1. **Dataset Immobilier Complet**
-📋 `historique_immobilier_paris_2017_2021_vdef2.xlsx`
+[**Dataset Immobilier Complet**](./historique_immobilier_paris_2017_2021_vdef2.xlsx)
 
 **Caractéristiques :**
 - **26,197 enregistrements** de transactions immobilières
@@ -88,19 +62,16 @@ analyse-immobilier-paris/
 - ✅ Complètes et validées
 - ✅ Nettoyées et structurées
 - ✅ Prêtes pour l'analyse
-- ⚠️ Absence potentielle de quelques transactions (données officielles DVFP)
 
 ---
 
-### 2. **Jupyter Notebook - Analyse Exploratoire**
-📓 `Kamoune_Assia_1_Notebook_012026.ipynb`
+[**Jupyter Notebook - Analyse Exploratoire**](./Kamoune_Assia_1_Notebook_012026.ipynb)
 
 **Contenu :**
 - **98 cellules** de code et documentation
 - **Milestone 1** : Analyse des données (types, structure, nettoyage)
 - **Exploration multidimensionnelle** : Tendances, corrélations, outliers
 - **Visualisations** : Graphiques, histogrammes, heatmaps
-- **OpenClassrooms - Parcours Data Analyst BI (P8)**
 
 **Sections principales :**
 
@@ -118,27 +89,16 @@ analyse-immobilier-paris/
 - 🐼 **Pandas** : Manipulation et exploration de données
 - 📊 **Matplotlib & Seaborn** : Visualisations statiques
 - 🔢 **NumPy** : Calculs numériques
-- 📈 **Scikit-learn** : Analyse statistique (optionnel)
-
-**Prérequis pour exécuter :**
-```bash
-# Installation des dépendances
-pip install pandas openpyxl matplotlib seaborn numpy jupyter
-
-# Lancer le notebook
-jupyter notebook Kamoune_Assia_1_Notebook_012026.ipynb
-```
+- 📈 **Scikit-learn** : Analyse statistique 
 
 ---
 
-### 3. **Présentation PowerPoint - Synthèse Exécutive**
-🎤 `Kamoune_Assia_2_presentation_012026.pptx`
+[**Présentation PowerPoint - Synthèse Exécutive**](./Kamoune_Assia_2_presentation_012026.pptx)
 
 **Contenu :**
 - **11 slides** pour une présentation claire et percutante
 - **Format professionnel** adapté à la communication exécutive
 - **Visuels** : Graphiques, tableaux, insights clés
-- **Durée estimée** : 15-20 minutes de présentation
 
 **Structure des slides :**
 
@@ -208,66 +168,7 @@ Types de locaux probables dans le dataset :
 
 ---
 
-## 🚀 Guide d'Utilisation
-
-### Pour les analystes métier
-
-1. **Consulter la présentation PowerPoint**
-   ```
-   → Ouvrir Kamoune_Assia_2_presentation_012026.pptx
-   → Revue des slides 1-11 pour comprendre les insights clés
-   → Partager avec les stakeholders
-   ```
-
-2. **Examiner le dataset brut**
-   ```
-   → Ouvrir historique_immobilier_paris_2017_2021_vdef2.xlsx
-   → Filtrer par arrondissement ou type de bien
-   → Analyser les tendances de prix
-   ```
-
-3. **Valider les conclusions**
-   ```
-   → Consulter le Notebook pour la méthodologie
-   → Vérifier les calculs et visualisations
-   → Reproduire les analyses si nécessaire
-   ```
-
-### Pour les Data Analysts
-
-1. **Explorer le notebook complet**
-   ```bash
-   # Lancer Jupyter
-   jupyter notebook Kamoune_Assia_1_Notebook_012026.ipynb
-   
-   # Examiner chaque cellule
-   # Exécuter le code
-   # Reproduire les visualisations
-   ```
-
-2. **Charger et analyser les données**
-   ```python
-   import pandas as pd
-   import matplotlib.pyplot as plt
-   
-   # Charger le dataset
-   df = pd.read_excel('historique_immobilier_paris_2017_2021_vdef2.xlsx')
-   
-   # Vue d'ensemble
-   print(df.info())
-   print(df.describe())
-   
-   # Analyse par arrondissement
-   prix_par_arrt = df.groupby('code_postal')['valeur_fonciere'].mean()
-   print(prix_par_arrt.sort_values(ascending=False))
-   
-   # Visualiser les tendances
-   df['annee'] = pd.to_datetime(df['date_mutation']).dt.year
-   df.groupby('annee')['valeur_fonciere'].mean().plot()
-   plt.show()
-   ```
-
-3. **Questions d'analyse potentielles**
+**Questions d'analyse potentielles**
 
    **Tendances temporelles :**
    - Comment ont évolué les prix moyen 2017-2021 ?
@@ -344,20 +245,9 @@ Types de locaux probables dans le dataset :
 | **Excel** | 365 | Stockage données |
 | **PowerPoint** | 365 | Présentation |
 
-### Configuration minimale
-
-```
-CPU : 2+ cores
-RAM : 4GB minimum (8GB recommandé)
-Disque : 500MB libre
-Python : 3.8+
-```
-
 ---
 
-## 📈 Résultats Clés (Spoiler Alert ⚠️)
-
-Consultez la présentation PowerPoint pour une synthèse complète, mais voici quelques insights :
+## 📈 Résultats Clés
 
 ### Tendances générales
 📈 Les prix du marché immobilier parisien ont **augmenté globalement** entre 2017 et 2021  
@@ -369,37 +259,6 @@ Consultez la présentation PowerPoint pour une synthèse complète, mais voici q
 - Périphérie (19-20) : Plus accessible
 - Prix au m² : 2,000€ à 30,000€ selon la localisation
 - Surface moyenne : ~60m² (majoritairement des appartements)
-
-*Pour plus de détails, consultez le Notebook ou la Présentation*
-
----
-
-## 💡 Utilisation des Fichiers
-
-### Cas d'usage type
-
-```
-Scénario : Je dois analyser le marché immobilier parisien
-
-1️⃣  Lire la présentation PowerPoint (5 min)
-    → Comprendre les insights clés et tendances
-
-2️⃣  Consulter le dataset Excel (10 min)
-    → Valider les chiffres mentionnés
-    → Filtrer par secteur d'intérêt
-
-3️⃣  Examiner le Notebook (30 min)
-    → Comprendre la méthodologie détaillée
-    → Reproduire l'analyse
-    → Approfondir certains points
-```
-
-### Partage des résultats
-
-- ✅ Présentation → Stakeholders, clients, investisseurs
-- ✅ Dataset → Analystes, data scientists
-- ✅ Notebook → Équipe data, audits méthodologiques
-
 ---
 
 ## 📚 Documentation Supplémentaire
@@ -426,8 +285,6 @@ Scénario : Je dois analyser le marché immobilier parisien
 
 ## 🤝 Contribution & Améliorations
 
-Pistes d'améliorations potentielles :
-
 1. **Analyse prédictive** : Modèle de prédiction des prix 2022-2023
 2. **Machine Learning** : Clustering des quartiers par profil
 3. **Données enrichies** : Intégration transports, services, criminalité
@@ -437,84 +294,7 @@ Pistes d'améliorations potentielles :
 
 ---
 
-## 📊 Statistiques du Projet
-
-| Métrique | Valeur |
-|----------|--------|
-| Fichiers livrables | 3 |
-| Nombre de transactions | 26,197 |
-| Cellules Notebook | 98 |
-| Slides présentation | 11 |
-| Années d'analyse | 5 (2017-2021) |
-| Arrondissements couverts | 20 |
-| Variables analysées | 9 |
-
----
-
-## ⚙️ Configuration pour Démarrer
-
-### Installation locale
-
-```bash
-# 1. Cloner le repository
-git clone https://github.com/votre-username/analyse-immobilier-paris.git
-cd analyse-immobilier-paris
-
-# 2. Créer environnement virtuel
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
-
-# 3. Installer dépendances
-pip install -r requirements.txt
-
-# 4. Lancer Jupyter
-jupyter notebook
-
-# 5. Ouvrir le notebook
-# → Kamoune_Assia_1_Notebook_012026.ipynb
-```
-
-### Requirements.txt
-
-```
-pandas>=2.0.0
-openpyxl>=3.10.0
-matplotlib>=3.7.0
-seaborn>=0.13.0
-numpy>=1.24.0
-jupyter>=1.0.0
-jupyterlab>=4.0.0
-```
-
----
-
-## 📧 Contact & Support
-
-**Responsable du projet :** Assia Kamoune  
-**Parcours :** OpenClassrooms - Data Analyst Business Intelligence (P8)  
-**Dernière mise à jour :** Janvier 2026  
-**Version :** 1.0  
-
----
-
-## 📄 Licence
-
-Ce projet est fourni à titre éducatif et d'analyse. 
-
-**Données sources** :
-- Données Valeurs Foncières (DVF) : Domaine public
-- Attribution : DGFIP (Direction Générale des Finances Publiques)
-
-**Code & Analyses** : Libre d'usage pour fins éducatives et commerciales
-
----
-
-## 🎓 Mentions
-
-- 🎓 **Parcours** : OpenClassrooms - Data Analyst Business Intelligence
-- 📚 **Milestone** : Projet 8 - Analyse complète d'un dataset immobilier
-- ✨ **Skills démontrées** :
+## ✨ **Skills démontrées** :
   - Exploration et nettoyage de données
   - Analyse statistique multidimensionnelle
   - Visualisation de données
@@ -522,7 +302,3 @@ Ce projet est fourni à titre éducatif et d'analyse.
   - Présentation exécutive
 
 ---
-
-**Merci d'avoir consulté ce projet d'analyse immobilière !** 🏢📊
-
-*Questions ou suggestions ? N'hésitez pas à créer une issue ou forker le projet !*
